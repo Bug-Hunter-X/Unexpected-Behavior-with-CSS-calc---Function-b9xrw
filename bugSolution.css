@@ -1,0 +1,17 @@
+/* Corrected CSS */
+
+.element {
+  width: calc(100% - 20px); /* Correct spacing around the minus operator */
+  padding: calc(10px + 2vmin); /* Correct spacing around the plus operator */
+}
+
+@media (min-width: 768px) {
+  .element {
+    width: calc(50% - 10px);  /* Ensure consistent behavior across breakpoints */
+  }
+}
+
+/* Avoid mixing units without explicit calculations, e.g., this would be an issue:
+width: 50% + 10px; */
+
+/* Always ensure clear spacing and unit consistency within calc() */
